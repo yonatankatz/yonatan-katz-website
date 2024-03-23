@@ -28,7 +28,7 @@ function getCurrentIsraelTime() {
 
     // Adjust for Israel time offset (UTC+3)
     var israelOffset = 3 * 60; // Offset in minutes
-    now.setMinutes(now.getMinutes() + israelOffset);
+    //now.setMinutes(now.getMinutes() + israelOffset);
 
     // Extract hours and minutes
     var hours = now.getHours();
@@ -52,17 +52,24 @@ function init(team) {
 }
 
  function clearText() {
-	document.getElementById("token").focus();
 	document.getElementById("token").value="";
  }
- function checkNumber() {
+
+ function checkNumber() {	
 	if (document.getElementById("token").value==myvalue.answer) {
-		document.getElementById("successHeader").innerHTML = " כל הכבוד" + myvalue["title"];
-		document.getElementById("successMsg").innerHTML = "שעת ביצוע: " + getCurrentIsraelTime() + "<br>" + "צלמו מסך, ותשלחו בקבוצה!";	
-		$("#successModal").modal();
+		document.getElementById("successHeader").innerHTML = " כל הכבוד " + myvalue["title"];
+		document.getElementById("successMsg").innerHTML = "שעת ביצוע: " + getCurrentIsraelTime() + "<br>" + "צלמו מסך, ותשלחו בקבוצה";	
+		// Assuming you have a reference to the element you want to modify
+		var element = document.getElementById('success'); // Replace 'yourElementId' with the ID of your element		
+		element.style.display = ''; // This sets it back to the default display value
+		element = document.getElementById('fail');
+		element.style.display = 'none';
 	}
 	else {
-		$("#failModal").modal();
+		var element = document.getElementById('fail');
+		element.style.display = '';
+		element = document.getElementById('success');
+		element.style.display = 'none';
 		clearText();		
 	}
  }

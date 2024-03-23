@@ -7,14 +7,9 @@
 <script src="script.js"></script>
 
 <style>
-    body {
-        padding: 20px;
+    html, body {
         overflow-x: hidden;
-        background-image: url('background.png'); /* Replace 'background-image.jpg' with the path to your image */
-        background-size: cover; /* Cover the entire background */
-        background-position: center; /* Center the background image */
-        background-repeat: no-repeat; /* Do not repeat the background image */
-
+        width: 100%;
     }
     .pinBox {
       --width: 296px;
@@ -84,9 +79,22 @@
      cursor: pointer
  }
 
+ .center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
  .continue:focus {
      outline: none
  }
+
+
 
  .continue {
      border-radius: 5px;
@@ -97,6 +105,7 @@
      color: #fff;
      background-color: #D50000
  }
+ 
 
  .continue:hover {
      background-color: #D32F2F !important
@@ -121,43 +130,26 @@
     <div>
         <h3 style="text-align: right;" id="yourSecret"></h3>
     </div>
-	<div style="width: 50%;margin: 0 auto;text-align: center;">
+	<div style="width: 100%;margin: auto;margin-top: 20dvh;text-align: center;">
 		<h1 style="">
 פורים שמח
 		</h1>
 		<div class="pinBox" style="text-align: left;">
 		  <input class="pinEntry" id="token" name="token" type=text maxlength=4 autocomplete=off >
 		</div>
-        <div>
-            <button onclick="clearText()" class="btn btn-primary mt-2">נקה</button>
-            <button onclick="checkNumber()" class="btn btn-primary mt-2">בדוק</button>		
+        <div style="margin-top:20px;">
+            <button onclick="clearText()" class="btn btn-primary btn-lg">נקה</button>
+            <button onclick="checkNumber()" class="btn btn-primary btn-lg">בדוק</button>		
         </div>
-    
+        <div id="success" style="display:none; margin-top:40px;">
+            <h1 id="successHeader"></h1>
+            <h2 id="successMsg"></h2>
+        </div>
+        <div id="fail" style="display:none; margin-top:40px;">
+            <h1>נסו שוב</h1>
+            <h2>עוד לא אבדה תקוותנו</h2>
+        </div>
 	</div>	
-	<div class="modal fade" id="successModal" role="dialog">
-     <div class="modal-dialog">
-         <div class="card" dir="rtl">
-             <div class="text-right cross"> <i class="fa fa-times"></i> </div>
-             <div class="card-body text-center"> <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
-                 <h4 id="successHeader"></h4>
-                 <p id="successMsg"></p>
-             </div>
-         </div>
-    </div>
-	</div>
-	<div class="modal fade" id="failModal" role="dialog">
-		 <div class="modal-dialog">
-			 <div class="card" dir="rtl">
-				 <div class="text-right cross"> <i class="fa fa-times"></i> </div>
-				 <div class="card-body text-center"> <img src="failure-icon-29.png">
-					 <h4>נסו שוב</h4>
-					 <p>עוד לא אבדה תקוותנו...</p>
-				 </div>
-			 </div>
-		</div>
-	</div>
-
-	
 <script>
 setTimeout(function() {init("hauser");}, 10);
 </script>
