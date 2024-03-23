@@ -70,8 +70,8 @@ function init(team) {
 		element.style.display = '';
 		element = document.getElementById('success');
 		element.style.display = 'none';
-		clearText();		
 	}
+	clearText();
  }
 
  

@@ -69,9 +69,9 @@ function init(team) {
 		var element = document.getElementById('fail');
 		element.style.display = '';
 		element = document.getElementById('success');
-		element.style.display = 'none';
-		clearText();		
+		element.style.display = 'none';		
 	}
+	clearText();
  }
 
  
