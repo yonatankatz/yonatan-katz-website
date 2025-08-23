@@ -200,7 +200,7 @@ a {
   right: 0;
 }
 
-.social li:nth-child(1) {
+.social li {
   margin-right: 16px;
 }
 
