@@ -34,6 +34,9 @@
                     <a href="https://medium.com/@katzyonatan" target="_blank"><i class="fab fa-medium"></i></a>
                 </div>
             </div>
+            <a href="#bio" class="scroll-down-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </section>
 
         <section id="bio">
@@ -180,7 +183,7 @@
                 e.preventDefault();
                 var target = $(this).attr('href');
                 $('html, body').animate({
-                    scrollTop: $(target).offset().top - 70
+                    scrollTop: $(target).offset().top
                 }, 800);
                 
                 $('.nav-links a').removeClass('active');
