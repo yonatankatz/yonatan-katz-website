@@ -1,232 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yonatan Katz | Software Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/new-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts for different themes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Press+Start+2P&family=Abril+Fatface&family=Inter:wght@300;400;800&family=VT323&family=Permanent+Marker&family=Outfit:wght@300;500;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        // Theme Switcher Logic
+        const themes = ['theme-neon', 'theme-pop', 'theme-swiss', 'theme-retro', 'theme-glass'];
+        // Check if a theme is already stored in session storage to persist during reload if desired, 
+        // BUT requirement says "every time the user goes to the website - he gets different appearence".
+        // So we will strictly randomize.
+        const randomTheme = themes[Math.floor(Math.random() * themes.length)];
+        document.documentElement.className = randomTheme;
+        console.log('Active Theme:', randomTheme);
+    </script>
 </head>
+
 <body>
+    <div class="app-container">
+        <header class="main-header">
+            <div class="logo">YK</div>
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#bio">Bio</a>
+                <a href="#videos">Videos</a>
+            </nav>
+        </header>
 
-    <header>
-        <nav class="container">
-            <a href="#" class="logo">YK</a>
-            <ul class="nav-links">
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#videos">Videos</a></li>
-            </ul>
-        </nav>
-    </header>
+        <main>
+            <section id="hero" class="hero-section">
+                <div class="hero-content">
+                    <h1 class="glitch-text" data-text="Yonatan Katz">Yonatan Katz</h1>
+                    <p class="subtitle">Software Engineer & Engineering Manager</p>
+                    <a href="mailto:y.katz.software@gmail.com" class="cta-button">y.katz.software@gmail.com</a>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="hero-content fade-in">
-                <h1>Yonatan Katz</h1>
-                <p>Software Engineer & Engineering Manager</p>
-                <a href="mailto:y.katz.software@gmail.com">y.katz.software@gmail.com</a>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/yonatan-katz-a07b562/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com/yonatan_katz" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.youtube.com/channel/UCvMyPiMtX1wUmFBM_kuNg-w" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://medium.com/@katzyonatan" target="_blank"><i class="fab fa-medium"></i></a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/yonatan-katz-a07b562/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/yonatan_katz" target="_blank" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UCvMyPiMtX1wUmFBM_kuNg-w" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://medium.com/@katzyonatan" target="_blank" aria-label="Medium"><i
+                                class="fab fa-medium"></i></a>
+                    </div>
                 </div>
-            </div>
-            <a href="#bio" class="scroll-down-arrow">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </section>
+                <div class="hero-visual">
+                    <img src="images/yonatan_caricature.png" alt="Yonatan Katz Caricature" class="hero-img">
+                </div>
+            </section>
 
-        <section id="bio">
-            <div class="container">
+            <section id="bio" class="bio-section">
                 <h2 class="section-title">About Me</h2>
-                <div class="bio-main-content fade-in">
-                    <!-- <div class="bio-image">
-                        <img src="images/client-img-4.jpg" alt="Yonatan Katz" class="profile-img">
-                    </div> -->
-                    <div class="bio-text">
-                        <h3>Professional Summary</h3>
-                        <ul>
-                            <li>Software Engineer at Google</li>
-                            <li>Founder and CTO at <a href="https://algotext.io/" target="_blank">Algotext</a> (acquired by <a href="https://costapp.co.il/" target="_blank">Costapp</a>)</li>
-                            <li>Co-founder of <a href="https://mashlom.me/" target="_blank">mashlom.me</a></li>
-                        </ul>
 
-                        <h3>Education</h3>
+                <div class="bio-grid">
+                    <div class="bio-card professional">
+                        <h3><i class="fas fa-code"></i> Professional</h3>
+                        <ul>
+                            <li>Software Engineer at <strong>Google</strong></li>
+                            <li>Co-founder of <a href="https://mashlom.me/" target="_blank">mashlom.me</a></li>
+                            <li>Founder and CTO at <a href="https://algotext.io/" target="_blank">Algotext</a> (acquired
+                                by <a href="https://costapp.co.il/" target="_blank">Costapp</a>)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bio-card education">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
                         <ul>
                             <li>B.Sc. Computer Science, The Open University, Israel</li>
                             <li>MBA, The Open University, Israel</li>
                         </ul>
+                    </div>
 
-                        <h3>Miscellaneous</h3>
+                    <div class="bio-card misc">
+                        <h3><i class="fas fa-star"></i> Miscellaneous</h3>
                         <ul>
                             <li><a href="https://devgadget.com" target="_blank">devgadget.com</a></li>
                             <li><a href="https://medium.com/@katzyonatan" target="_blank">Blog</a></li>
-                            <li><a href="https://ieeexplore.ieee.org/abstract/document/10154340" target="_blank">Publication: Cold Start for Cloud Anomaly Detection</a></li>
+                            <li><a href="https://ieeexplore.ieee.org/abstract/document/10154340"
+                                    target="_blank">Publication: Cold Start for Cloud Anomaly Detection</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="videos">
-            <div class="container">
-                <h2 class="section-title">Videos</h2>
-                                <div class="playlists fade-in">
-                    <h3 class="text-dark fw-700">Playlists</h3>
-                    <div class="playlist-links">
-                        <a href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV__gV7FPLYLUSLV3-HsNGla" target="_blank">LLM & Transformers</a>
-                        <a href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV9xIsloLgeYLMdV53z8zkaz" target="_blank">Machine Learning</a>
-                        <a href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV9-Y97yeQOV8NGWrAUx4mEA" target="_blank">WEB</a>
+                <!-- Photo Gallery Grid -->
+                <div class="photo-gallery">
+                    <div class="gallery-item">
+                        <img src="images/client-img-3.jpg" alt="Sitting on Google Logo">
+                        <span class="caption">Google Life</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/IMG-20250814-WA0009.jpg" alt="Playing Chess in NYC">
+                        <span class="caption">Chess in NYC</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/PXL_20250828_091002800.jpg" alt="Hiking in Israel">
+                        <span class="caption">Family Hike</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/PXL_20251104_070756418.jpg" alt="Conference">
+                        <span class="caption">Mashlom.me Conference</span>
                     </div>
                 </div>
-                <div class="video-carousel owl-carousel owl-theme fade-in">
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/ptjLE72UecQ" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/f7c47ofXnLg" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/1l8w-SgTSLQ" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/5TuJqt0LgK4" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/nMhHz0pl62Y" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/RSjU69ft4pA" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/0CDq7Fr2QHM" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/eXM1OEFHOsw" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/0O857G0h4HA" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/Lke2T95p55k" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/b3qjlYRY78o" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/GwxV6RagOlQ" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/ds1C9hGvNXg" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/BvJVGDDgPu8" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/j0KtfTpdx54" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/IIqpzESMiE4" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/6GUHRGeQKIg" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/-vPUiAH8f8w" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/E1mN67FsDjU" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
-                    <div class="item">
-                        <iframe src="https://www.youtube.com/embed/8PNP4WmH3oM" frameborder="0" allowfullscreen height="371" width="100%"></iframe>
-                    </div>
+            </section>
+
+            <section id="videos" class="videos-section">
+                <h2 class="section-title">Videos & Playlists</h2>
+
+                <div class="playlist-links">
+                    <a href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV__gV7FPLYLUSLV3-HsNGla" target="_blank"
+                        class="playlist-tag">LLM & Transformers</a>
+                    <a href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV9xIsloLgeYLMdV53z8zkaz" target="_blank"
+                        class="playlist-tag">Machine Learning</a>
+                    <a href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV9-Y97yeQOV8NGWrAUx4mEA" target="_blank"
+                        class="playlist-tag">WEB</a>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Yonatan Katz. All Rights Reserved.</p>
-    </footer>
+                <div class="video-scroller">
+                    <!-- Videos -->
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/ptjLE72UecQ" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/f7c47ofXnLg" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/1l8w-SgTSLQ" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/5TuJqt0LgK4" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/nMhHz0pl62Y" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/RSjU69ft4pA" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/0CDq7Fr2QHM" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/eXM1OEFHOsw" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/0O857G0h4HA" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/Lke2T95p55k" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/b3qjlYRY78o" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/GwxV6RagOlQ" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/ds1C9hGvNXg" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/BvJVGDDgPu8" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/j0KtfTpdx54" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/IIqpzESMiE4" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/6GUHRGeQKIg" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/-vPUiAH8f8w" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/E1mN67FsDjU" loading="lazy"
+                            allowfullscreen></iframe></div>
+                    <div class="video-card"><iframe src="https://www.youtube.com/embed/8PNP4WmH3oM" loading="lazy"
+                            allowfullscreen></iframe></div>
+                </div>
+            </section>
+        </main>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script>
-        $(document).ready(function(){
-            // Owl Carousel for videos
-            $('.video-carousel').owlCarousel({
-                loop:true,
-                margin:10,
-                nav:true,
-                items: 1,
-                autoplay: false,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                smartSpeed: 1000,
-                navText: ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"]
-            });
-
-            // Navbar scroll effect
-            $(window).scroll(function(){
-                if($(this).scrollTop() > 50){
-                    $('header').addClass('scrolled');
-                } else {
-                    $('header').removeClass('scrolled');
-                }
-            });
-
-            // Smooth scrolling for nav links
-            $('.nav-links a').on('click', function(e) {
-                e.preventDefault();
-                var target = $(this).attr('href');
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top
-                }, 800);
-                
-                $('.nav-links a').removeClass('active');
-                $(this).addClass('active');
-            });
-
-            // Active nav link on scroll
-            $(window).on('scroll', function() {
-                var scrollPos = $(document).scrollTop();
-                $('.nav-links a').each(function () {
-                    var currLink = $(this);
-                    var refElement = $(currLink.attr("href"));
-                    if (refElement.position().top - 75 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                        $('.nav-links a').removeClass("active");
-                        currLink.addClass("active");
-                    }
-                    else{
-                        currLink.removeClass("active");
-                    }
-                });
-            });
-
-            // Fade-in animation on scroll
-            const faders = document.querySelectorAll('.fade-in');
-            const appearOptions = {
-                threshold: 0.3,
-                rootMargin: "0px 0px -100px 0px"
-            };
-            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) {
-                        return;
-                    } else {
-                        entry.target.classList.add('visible');
-                        appearOnScroll.unobserve(entry.target);
-                    }
-                });
-            }, appearOptions);
-
-            faders.forEach(fader => {
-                appearOnScroll.observe(fader);
-            });
-        });
-    </script>
+        <footer>
+            <p>&copy; 2024 Yonatan Katz. All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
+
 </html>
