@@ -4,177 +4,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yonatan Katz | Software Engineer</title>
+    <title>Yonatan Katz  -  Engineering Leader & Entrepreneur</title>
+    <meta name="description"
+        content="Yonatan Katz  -  engineering leader and entrepreneur. Software Engineer at Google Cloud, Co-Founder & CTO of mashlom.me. 20 years building software products across startups and global companies.">
+
+    <!-- Link previews -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Yonatan Katz  -  Engineering Leader & Entrepreneur">
+    <meta property="og:description"
+        content="Software Engineer at Google Cloud · Co-Founder & CTO, mashlom.me · 20 years in engineering and management.">
+    <meta property="og:image" content="https://yonatankatz.com/images/yonatan-portrait.jpg">
+    <meta property="og:url" content="https://yonatankatz.com/">
+    <meta name="twitter:card" content="summary">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fonts for different themes -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Press+Start+2P&family=Abril+Fatface&family=Inter:wght@300;400;800&family=VT323&family=Permanent+Marker&family=Outfit:wght@300;500;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/site.css">
     <script>
-        // Theme Switcher Logic
-        const themes = ['theme-neon', 'theme-swiss', 'theme-retro', 'theme-glass'];
-        // Check if a theme is already stored in session storage to persist during reload if desired, 
-        // BUT requirement says "every time the user goes to the website - he gets different appearence".
-        // So we will strictly randomize.
-        const randomTheme = themes[Math.floor(Math.random() * themes.length)];
-        document.documentElement.className = randomTheme;
-        console.log('Active Theme:', randomTheme);
+        // A different (but always understated) look on every visit.
+        const themes = ['theme-slate', 'theme-navy'];
+        const forcedTheme = 'theme-' + new URLSearchParams(location.search).get('theme');
+        document.documentElement.classList.add(themes.includes(forcedTheme)
+            ? forcedTheme
+            : themes[Math.floor(Math.random() * themes.length)]);
     </script>
 </head>
 
 <body>
-    <div class="app-container">
-        <header class="main-header">
-            <div class="logo">YK</div>
-            <nav>
-                <a href="#hero">Home</a>
-                <a href="#bio">Bio</a>
-                <a href="#videos">Videos</a>
+    <header class="site-header">
+        <div class="container">
+            <a href="#top" class="wordmark">Yonatan Katz</a>
+            <nav class="site-nav">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#mashlom">mashlom.me</a>
+                <a href="#teaching">Teaching</a>
+                <a href="#contact">Contact</a>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <main>
-            <section id="hero" class="hero-section">
-                <div class="hero-content">
-                    <h1 class="glitch-text" data-text="Yonatan Katz">Yonatan Katz</h1>
-                    <p class="subtitle">Software Engineer & Engineering Manager</p>
-                    <a href="mailto:y.katz.software@gmail.com" class="cta-button">y.katz.software@gmail.com</a>
-
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/yonatan-katz-a07b562/" target="_blank"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/yonatan_katz" target="_blank" aria-label="Twitter"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="https://www.youtube.com/channel/UCvMyPiMtX1wUmFBM_kuNg-w" target="_blank"
-                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://medium.com/@katzyonatan" target="_blank" aria-label="Medium"><i
-                                class="fab fa-medium"></i></a>
+    <main id="top">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div>
+                    <p class="eyebrow">Engineering leader · Entrepreneur</p>
+                    <h1>Yonatan Katz</h1>
+                    <p class="lede">I build software products that meet real needs  -  simply and
+                        humanely. Twenty years in the industry as a manager and as a hands-on engineer, from early-stage
+                        startups to global companies.</p>
+                    <ul class="roles">
+                        <li>Software Engineer, Google Cloud</li>
+                        <li>Co-Founder & CTO, <a href="https://mashlom.me/"
+                                target="_blank" rel="noopener">mashlom.me</a></li>
+                    </ul>
+                    <div class="actions">
+                        <a class="btn btn-primary" href="mailto:y.katz.software@gmail.com"><i
+                                class="fa-regular fa-envelope"></i> <span>Get in touch</span></a>
+                        <a class="btn" href="https://www.linkedin.com/in/yonatan-katz-a07b562/" target="_blank"
+                            rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <div class="icon-links">
+                            <a href="https://www.youtube.com/channel/UCvMyPiMtX1wUmFBM_kuNg-w" target="_blank"
+                                rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://twitter.com/yonatan_katz" target="_blank" rel="noopener"
+                                aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://medium.com/@katzyonatan" target="_blank" rel="noopener"
+                                aria-label="Medium"><i class="fab fa-medium"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <img src="images/yonatan_caricature.png" alt="Yonatan Katz Caricature" class="hero-img">
+                <div class="portrait">
+                    <img src="images/yonatan-portrait.jpg" alt="Portrait of Yonatan Katz" width="800" height="800">
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="bio" class="bio-section">
-                <h2 class="section-title">About Me</h2>
+        <!-- KEY NUMBERS -->
+        <section class="stats-wrap" aria-label="Highlights">
+            <div class="container">
+                <div class="stats">
+                    <div class="stat"><strong>20</strong><span>years in the industry, as a
+                            manager and an engineer</span></div>
+                    <div class="stat"><strong>2</strong><span>companies founded  -  one
+                            acquired</span></div>
+                    <div class="stat"><strong>5</strong><span>hospitals we've built apps
+                            for at mashlom.me</span></div>
+                    <div class="stat"><strong>250+</strong><span>physicians and nurses on
+                            the mashlom.me platform</span></div>
+                </div>
+            </div>
+        </section>
 
-                <div class="bio-grid">
-                    <div class="bio-card professional">
-                        <h3><i class="fas fa-code"></i> Professional</h3>
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="section-head">
+                        <p class="eyebrow">About</p>
+                        <h2>Engineer, manager, founder</h2>
+                    </div>
+                    <div class="about-text">
+                        <p>I've spent two decades on both sides of engineering  -  leading teams and
+                            organizations, and writing the code myself  -  in startups finding their footing and in
+                            global enterprises operating at scale.</p>
+                        <p>I have a strong background in AI and web applications, and a particular love for good UX.</p>
+                        <p>I'm an entrepreneur at heart, and I know how to find a way through to the result.</p>
+                    </div>
+                </div>
+
+                <div class="pillars">
+                    <div class="pillar">
+                        <i class="fa-solid fa-people-group"></i>
+                        <h3>Leadership at every scale</h3>
+                        <p>Engineering manager at Imperva and CA Technologies, VP R&D at Proonto,
+                            tech lead at AOL. I've built and led teams in young startups and in global enterprises.</p>
+                    </div>
+                    <div class="pillar">
+                        <i class="fa-solid fa-compass"></i>
+                        <h3>Entrepreneurship, end to end</h3>
+                        <p>Founded algotext.io (acquired by Costapp) and co-founded mashlom.me.
+                            Owned the whole path: product, engineering, marketing, go-to-market and product–market fit.
+                        </p>
+                    </div>
+                    <div class="pillar">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h3>AI, cloud and security</h3>
+                        <p>Hands-on depth in machine learning and AI, cloud infrastructure at
+                            Google Cloud, and cyber security  -  including published research on anomaly detection for
+                            cloud systems.</p>
+                    </div>
+                    <div class="pillar">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <h3>Healthcare and public impact</h3>
+                        <p>Built mashlom.me with a team of volunteers to give medical teams
+                            practical, everyday tools  -  with dedicated apps developed for five hospitals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Experience</p>
+                    <h2>Where I've built and led</h2>
+                    <p>Two decades across management and hands-on engineering  -  in startups, scale-ups and global
+                        enterprises.</p>
+                </div>
+                <div class="exp-grid">
+                    <ol class="timeline">
+                        <li class="tl-label">Current</li>
+                        <li class="tl-item is-current">
+                            <span class="tl-mark">G</span>
+                            <div>
+                                <h3>Software Engineer</h3>
+                                <p class="tl-org">Google <span>· Google Cloud (GCP)</span></p>
+                            </div>
+                        </li>
+                        <li class="tl-item is-current">
+                            <span class="tl-mark">m</span>
+                            <div>
+                                <h3>Co-Founder &amp; CTO</h3>
+                                <p class="tl-org"><a href="https://mashlom.me/" target="_blank"
+                                        rel="noopener">mashlom.me</a></p>
+                                <p class="tl-note">Tools, apps and clinical aids for physicians and hospitals  -  used in
+                                    five hospitals, with 250+ registered physicians and nurses.</p>
+                            </div>
+                        </li>
+
+                        <li class="tl-label">Previous</li>
+                        <li class="tl-item">
+                            <span class="tl-mark">I</span>
+                            <div>
+                                <h3>Engineering Manager</h3>
+                                <p class="tl-org">Imperva</p>
+                            </div>
+                        </li>
+                        <li class="tl-item">
+                            <span class="tl-mark">a</span>
+                            <div>
+                                <h3>Founder &amp; CEO <span class="tag">Acquired</span></h3>
+                                <p class="tl-org">algotext.io</p>
+                                <p class="tl-note">Acquired by <a href="https://costapp.co.il/" target="_blank"
+                                        rel="noopener">Costapp</a>. Led product, marketing, go-to-market and
+                                    product–market fit.</p>
+                            </div>
+                        </li>
+                        <li class="tl-item">
+                            <span class="tl-mark">A</span>
+                            <div>
+                                <h3>Tech Lead</h3>
+                                <p class="tl-org">AOL</p>
+                            </div>
+                        </li>
+                        <li class="tl-item">
+                            <span class="tl-mark">P</span>
+                            <div>
+                                <h3>VP R&amp;D</h3>
+                                <p class="tl-org">Proonto</p>
+                            </div>
+                        </li>
+                        <li class="tl-item">
+                            <span class="tl-mark">CA</span>
+                            <div>
+                                <h3>Engineering Manager</h3>
+                                <p class="tl-org">CA Technologies</p>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <div class="exp-side">
+                        <div class="side-card">
+                            <h3><i class="fa-solid fa-shield-halved"></i> Military service</h3>
+                            <ul>
+                                <li><strong>Officer, Engineering Team Leader</strong><span>Israeli Air Force</span></li>
+                                <li><strong>Software Development Training Program</strong><span>MAMRAM</span></li>
+                            </ul>
+                        </div>
+                        <div class="side-card">
+                            <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                            <ul>
+                                <li><strong>MBA</strong><span>The Open University</span></li>
+                                <li><strong>B.Sc. Computer Science</strong><span>The Open University</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MASHLOM.ME -->
+        <section id="mashlom" class="feature">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-text">
+                        <p class="eyebrow">Featured venture</p>
+                        <h2 class="feature-title">mashlom.me  -  technology
+                            for medical teams</h2>
+                        <p>mashlom.me builds tools, apps and clinical aids for physicians, nurses and
+                            hospitals. I co-founded it out of a deep interest in medicine, and lead it as CTO  -  from
+                            architecture and product to go-to-market and partnerships with hospitals.</p>
+                        <div class="feature-stats">
+                            <div><strong>5</strong><span>hospitals we've built apps for</span></div>
+                            <div><strong>250+</strong><span>physicians & nurses registered</span>
+                            </div>
+                            <div><strong>3,600</strong><span>visits in a month</span></div>
+                            <div><strong>10</strong><span>active volunteers</span></div>
+                        </div>
+                        <a class="text-link" href="https://mashlom.me/" target="_blank" rel="noopener">Visit mashlom.me →</a>
+                    </div>
+                    <figure>
+                        <img src="images/PXL_20251104_070756418.jpg" loading="lazy"
+                            alt="Yonatan Katz at the annual conference of the Israeli Association for Emergency Medicine">
+                        <figcaption>At the 28th annual conference of the Israeli Association for
+                            Emergency Medicine, November 2025.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEACHING & RESEARCH -->
+        <section id="teaching">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Teaching & research</p>
+                    <h2>Sharing what I know</h2>
+                    <p>I teach AI and software engineering  -  in academic lectures and in free
+                        Hebrew video series on YouTube  -  from the fundamentals of machine learning and the web to how
+                        large language models work under the hood.</p>
+                </div>
+
+                <div class="share-grid">
+                    <a class="video" href="https://www.youtube.com/watch?v=0O857G0h4HA&list=PLIVQ-BV5cIV9xIsloLgeYLMdV53z8zkaz"
+                        target="_blank" rel="noopener">
+                        <div class="thumb"><img src="https://i.ytimg.com/vi/0O857G0h4HA/hqdefault.jpg" loading="lazy"
+                                alt=""></div>
+                        <h3>Machine Learning at Eye Level: Introduction</h3>
+                        <p>Machine Learning series · Part 1</p>
+                    </a>
+                    <a class="video" href="https://www.youtube.com/watch?v=j0KtfTpdx54&list=PLIVQ-BV5cIV9-Y97yeQOV8NGWrAUx4mEA"
+                        target="_blank" rel="noopener">
+                        <div class="thumb"><img src="https://i.ytimg.com/vi/j0KtfTpdx54/hqdefault.jpg" loading="lazy"
+                                alt=""></div>
+                        <h3>Behind the Scenes of the Web: URL</h3>
+                        <p>Web series · Part 1</p>
+                    </a>
+                    <a class="video" href="https://www.youtube.com/watch?v=jVtfV_DlCOM" target="_blank" rel="noopener">
+                        <div class="thumb"><img src="https://i.ytimg.com/vi/jVtfV_DlCOM/hqdefault.jpg" loading="lazy"
+                                alt=""></div>
+                        <h3>AI Lecture at Bar-Ilan University</h3>
+                        <p>Department of Middle Eastern Studies</p>
+                    </a>
+                    <a class="video" href="https://www.youtube.com/watch?v=9MZ-UeIlfkI" target="_blank" rel="noopener">
+                        <div class="thumb"><img src="https://i.ytimg.com/vi/9MZ-UeIlfkI/hqdefault.jpg" loading="lazy"
+                                alt=""></div>
+                        <h3>AI Fundamentals</h3>
+                        <p>Lecture</p>
+                    </a>
+                    <a class="video" href="https://www.youtube.com/watch?v=ptjLE72UecQ&list=PLIVQ-BV5cIV__gV7FPLYLUSLV3-HsNGla"
+                        target="_blank" rel="noopener">
+                        <div class="thumb"><img src="https://i.ytimg.com/vi/ptjLE72UecQ/hqdefault.jpg" loading="lazy"
+                                alt=""></div>
+                        <h3>The Evolution of AI</h3>
+                        <p>LLM & Transformers series · Introduction</p>
+                    </a>
+                    <a class="video" href="https://www.youtube.com/watch?v=dhuFiDq8hPI" target="_blank" rel="noopener">
+                        <div class="thumb"><img src="https://i.ytimg.com/vi/dhuFiDq8hPI/hqdefault.jpg" loading="lazy"
+                                alt=""></div>
+                        <h3>Resuscitation Room System</h3>
+                        <p>mashlom.me · Product walkthrough</p>
+                    </a>
+                </div>
+
+                <div class="resources">
+                    <div class="resource">
+                        <p class="eyebrow">Lecture series</p>
+                        <h3>Full playlists</h3>
                         <ul>
-                            <li>Software Engineer at <strong>Google</strong></li>
-                            <li>Co-founder of <a href="https://mashlom.me/" target="_blank">mashlom.me</a></li>
-                            <li>Founder and CTO at <a href="https://algotext.io/" target="_blank">Algotext</a> (acquired
-                                by <a href="https://costapp.co.il/" target="_blank">Costapp</a>)</li>
+                            <li><a class="text-link"
+                                    href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV__gV7FPLYLUSLV3-HsNGla"
+                                    target="_blank" rel="noopener">LLM & Transformers</a></li>
+                            <li><a class="text-link"
+                                    href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV9xIsloLgeYLMdV53z8zkaz"
+                                    target="_blank" rel="noopener">Machine Learning</a></li>
+                            <li><a class="text-link"
+                                    href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV9-Y97yeQOV8NGWrAUx4mEA"
+                                    target="_blank" rel="noopener">Web Development</a></li>
                         </ul>
                     </div>
-
-                    <div class="bio-card education">
-                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                        <ul>
-                            <li>B.Sc. Computer Science, The Open University, Israel</li>
-                            <li>MBA, The Open University, Israel</li>
-                        </ul>
+                    <div class="resource">
+                        <p class="eyebrow">Publication</p>
+                        <h3>Cold Start for Cloud Anomaly Detection</h3>
+                        <p>Katz & Raz, IEEE/IFIP Network Operations and Management Symposium
+                            (NOMS) 2023.</p>
+                        <a class="text-link" href="https://ieeexplore.ieee.org/abstract/document/10154340"
+                            target="_blank" rel="noopener">Read on IEEE Xplore →</a>
                     </div>
-
-                    <div class="bio-card misc">
-                        <h3><i class="fas fa-star"></i> Miscellaneous</h3>
-                        <ul>
-                            <li><a href="https://devgadget.com" target="_blank">devgadget.com</a></li>
-                            <li><a href="https://medium.com/@katzyonatan" target="_blank">Blog</a></li>
-                            <li><a href="https://ieeexplore.ieee.org/abstract/document/10154340"
-                                    target="_blank">Publication: Cold Start for Cloud Anomaly Detection</a></li>
-                        </ul>
+                    <div class="resource">
+                        <p class="eyebrow">Writing</p>
+                        <h3>Blog</h3>
+                        <p>Notes on engineering, AI and building products.</p>
+                        <a class="text-link" href="https://medium.com/@katzyonatan" target="_blank" rel="noopener">Read on Medium →</a>
                     </div>
-                </div>
-
-                <!-- Photo Gallery Grid -->
-                <div class="photo-gallery">
-                    <div class="gallery-item">
-                        <img src="images/client-img-3.jpg" alt="Sitting on Google Logo">
-                        <span class="caption">Google Life</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/IMG-20250814-WA0009.jpg" alt="Playing Chess in NYC">
-                        <span class="caption">Chess in NYC</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/PXL_20250828_091002800.jpg" alt="Hiking in Israel">
-                        <span class="caption">Family Hike</span>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/PXL_20251104_070756418.jpg" alt="Conference">
-                        <span class="caption">Mashlom.me Conference</span>
+                    <div class="resource">
+                        <p class="eyebrow">Side project</p>
+                        <h3>devgadget.com</h3>
+                        <p>Handy tools and gadgets for developers.</p>
+                        <a class="text-link" href="https://devgadget.com" target="_blank" rel="noopener">Visit devgadget.com →</a>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="videos" class="videos-section">
-                <h2 class="section-title">Videos & Playlists</h2>
-
-                <div class="playlist-links">
-                    <a href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV__gV7FPLYLUSLV3-HsNGla" target="_blank"
-                        class="playlist-tag">LLM & Transformers</a>
-                    <a href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV9xIsloLgeYLMdV53z8zkaz" target="_blank"
-                        class="playlist-tag">Machine Learning</a>
-                    <a href="https://www.youtube.com/playlist?list=PLIVQ-BV5cIV9-Y97yeQOV8NGWrAUx4mEA" target="_blank"
-                        class="playlist-tag">WEB</a>
+        <!-- BEYOND WORK -->
+        <section id="beyond">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Beyond work</p>
+                    <h2>A few moments</h2>
                 </div>
-
-                <div class="video-scroller">
-                    <!-- Videos -->
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/ptjLE72UecQ" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/f7c47ofXnLg" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/1l8w-SgTSLQ" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/5TuJqt0LgK4" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/nMhHz0pl62Y" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/RSjU69ft4pA" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/0CDq7Fr2QHM" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/eXM1OEFHOsw" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/0O857G0h4HA" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/Lke2T95p55k" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/b3qjlYRY78o" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/GwxV6RagOlQ" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/ds1C9hGvNXg" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/BvJVGDDgPu8" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/j0KtfTpdx54" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/IIqpzESMiE4" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/6GUHRGeQKIg" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/-vPUiAH8f8w" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/E1mN67FsDjU" loading="lazy"
-                            allowfullscreen></iframe></div>
-                    <div class="video-card"><iframe src="https://www.youtube.com/embed/8PNP4WmH3oM" loading="lazy"
-                            allowfullscreen></iframe></div>
+                <div class="moments">
+                    <figure>
+                        <img src="images/client-img-3.jpg" loading="lazy" alt="Yonatan at the Google campus">
+                        <figcaption>At the Google campus in Mountain View</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/IMG-20250814-WA0009.jpg" loading="lazy" alt="Playing chess in New York">
+                        <figcaption>A game of chess in New York</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/PXL_20250828_091002800.jpg" loading="lazy" alt="Hiking with family in Israel">
+                        <figcaption>Hiking with the family</figcaption>
+                    </figure>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
 
-        <footer>
-            <p>&copy; 2026 Yonatan Katz. All Rights Reserved.</p>
-        </footer>
-    </div>
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let's talk</h2>
+                    <p>I'm always happy to talk about engineering leadership, building products,
+                        and technology in healthcare.</p>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-primary" href="mailto:y.katz.software@gmail.com"><i
+                            class="fa-regular fa-envelope"></i> y.katz.software@gmail.com</a>
+                    <a class="btn" href="https://www.linkedin.com/in/yonatan-katz-a07b562/" target="_blank"
+                        rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a class="btn" href="https://www.youtube.com/channel/UCvMyPiMtX1wUmFBM_kuNg-w" target="_blank"
+                        rel="noopener"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a class="btn" href="https://twitter.com/yonatan_katz" target="_blank" rel="noopener"><i
+                            class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 <span>Yonatan Katz</span></p>
+    </footer>
+
 </body>
 
 </html>
